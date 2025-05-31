@@ -18,7 +18,7 @@
                 <input type="text" id="autor" class="form-control" placeholder="Autor" required>
             </div>
             <div class="col-12 col-md-2">
-                <input type="number" id="anio_publicacion" class="form-control" placeholder="Año">
+                <input type="number" id="Anio_publicacion" class="form-control" placeholder="Año">
             </div>
             <div class="col-12 col-md-4">
                 <input type="text" id="categoria" class="form-control" placeholder="Categoría" required>
@@ -53,7 +53,7 @@
     const form = document.getElementById('form-libro');
     const inputTitulo = document.getElementById('titulo');
     const inputAutor = document.getElementById('autor');
-    const inputAnio = document.getElementById('anio_publicacion');
+    const inputAnio = document.getElementById('Anio_publicacion');
     const inputCategoria = document.getElementById('categoria');
     const btnCancelar = document.getElementById('btn-cancelar');
     const mensaje = document.getElementById('mensaje');
@@ -78,7 +78,7 @@
                     <td>${libro.id}</td>
                     <td>${libro.Titulo}</td>
                     <td>${libro.Autor}</td>
-                    <td>${libro.anio_publicacion}</td>
+                    <td>${libro.Anio_publicacion}</td>
                     <td>${libro.categoria}</td>
                     <td>
                         <button class="btn btn-sm btn-warning me-2" onclick="editarLibro(${libro.id}, '${libro.Titulo.replace(/'/g, "&#39;")}', '${libro.Autor.replace(/'/g, "&#39;")}', ${libro.anio_publicacion}, '${libro.categoria.replace(/'/g, "&#39;")}')">Editar</button>
@@ -99,7 +99,7 @@
         const libro = {
             Titulo: inputTitulo.value.trim(),
             Autor: inputAutor.value.trim(),
-            anio_publicacion: parseInt(inputAnio.value),
+            Anio_publicacion: parseInt(inputAnio.value),
             categoria: inputCategoria.value.trim()
         };
         try {
